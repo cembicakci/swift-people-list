@@ -24,7 +24,7 @@ struct PersonItemView: View {
             }
             
             VStack(alignment: .leading) {
-                PillComponent(id: "\(user.id ?? 0)")
+                PillComponent(id: user.id ?? 0)
                 
                 Text("\(user.firstName ?? "") \(user.lastName ?? "")")
                     .foregroundColor(Theme.text)

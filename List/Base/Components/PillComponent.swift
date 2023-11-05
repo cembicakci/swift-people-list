@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PillComponent: View {
     
-    let id: String
+    let id: Int
     
     var body: some View {
         Text("#\(id)")
@@ -26,6 +26,6 @@ struct PillComponent: View {
 
 struct PillComponent_Previews: PreviewProvider {
     static var previews: some View {
-        PillComponent(id: "0")
+        PillComponent(id: 0)
     }
 }
