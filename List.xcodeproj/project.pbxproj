@@ -23,6 +23,7 @@
 		E508090A2AF791A20000B821 /* PillComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50809092AF791A20000B821 /* PillComponent.swift */; };
 		E508090C2AF799930000B821 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E508090B2AF799930000B821 /* DetailView.swift */; };
 		E508090E2AF7AC320000B821 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E508090D2AF7AC320000B821 /* CreateView.swift */; };
+		E50809112AF7C1140000B821 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50809102AF7C1140000B821 /* NetworkingManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		E50809092AF791A20000B821 /* PillComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillComponent.swift; sourceTree = "<group>"; };
 		E508090B2AF799930000B821 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		E508090D2AF7AC320000B821 /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
+		E50809102AF7C1140000B821 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +242,7 @@
 		E50808F72AF641DE0000B821 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				E508090F2AF7C1070000B821 /* API */,
 				E50809062AF791690000B821 /* Components */,
 				E50808FB2AF6429E0000B821 /* Mapper */,
 				E50808F82AF641E60000B821 /* Model */,
@@ -269,6 +272,14 @@
 				E50809092AF791A20000B821 /* PillComponent.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		E508090F2AF7C1070000B821 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				E50809102AF7C1140000B821 /* NetworkingManager.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,6 +362,7 @@
 				E508090C2AF799930000B821 /* DetailView.swift in Sources */,
 				E50808D12AF63C670000B821 /* ListApp.swift in Sources */,
 				E50808F62AF640EC0000B821 /* UsersResponse.swift in Sources */,
+				E50809112AF7C1140000B821 /* NetworkingManager.swift in Sources */,
 				E50808FA2AF641F00000B821 /* Models.swift in Sources */,
 				E50809052AF7909D0000B821 /* PersonItemView.swift in Sources */,
 				E508090E2AF7AC320000B821 /* CreateView.swift in Sources */,
