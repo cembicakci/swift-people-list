@@ -9,18 +9,24 @@ import SwiftUI
 
 struct PersonItemView: View {
     
-    let user: Int
+    let user: User
     
     var body: some View {
         VStack(spacing: .zero) {
-            Rectangle()
-                .fill(.blue)
-                .frame(height: 130)
+            AsyncImage(url: .init(string: user.avatar)) { image in
+                image
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(height: 130)
+                    .clipped()
+            } placeholder: {
+                ProgressView()
+            }
             
             VStack(alignment: .leading) {
-                PillComponent(id: "\(user)")
+                PillComponent(id: "\(user.id ?? 0)")
                 
-                Text("Cem Bıçakcı")
+                Text("\(user.firstName ?? "") \(user.lastName ?? "")")
                     .foregroundColor(Theme.text)
                     .font(
                         .system(.body, design: .rounded)
@@ -49,8 +55,10 @@ struct PersonItemView: View {
 }
 
 struct PersonItemView_Previews: PreviewProvider {
+    
+    
     static var previews: some View {
-        PersonItemView(user: 0)
+        PersonItemView(user: User(id: 1, email: "test@gmail.com", firstName: "Cem", lastName: "Bicakci", avatar: "https://reqres.in/img/faces/1-image.jpg"))
             .frame(width: 250)
     }
 }
