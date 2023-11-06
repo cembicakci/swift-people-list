@@ -24,6 +24,8 @@
 		E508090C2AF799930000B821 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E508090B2AF799930000B821 /* DetailView.swift */; };
 		E508090E2AF7AC320000B821 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E508090D2AF7AC320000B821 /* CreateView.swift */; };
 		E50809112AF7C1140000B821 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50809102AF7C1140000B821 /* NetworkingManager.swift */; };
+		E50809132AF96D2C0000B821 /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50809122AF96D2C0000B821 /* PeopleViewModel.swift */; };
+		E50809152AF972930000B821 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50809142AF972930000B821 /* DetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		E508090B2AF799930000B821 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		E508090D2AF7AC320000B821 /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
 		E50809102AF7C1140000B821 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		E50809122AF96D2C0000B821 /* PeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
+		E50809142AF972930000B821 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +187,7 @@
 		E50808EB2AF63F040000B821 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				E50809122AF96D2C0000B821 /* PeopleViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -228,6 +233,7 @@
 		E50808F12AF63F250000B821 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				E50809142AF972930000B821 /* DetailsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -356,6 +362,7 @@
 			files = (
 				E50808F42AF63F590000B821 /* UserDetailResponse.swift in Sources */,
 				E50809032AF64BDA0000B821 /* Theme.swift in Sources */,
+				E50809152AF972930000B821 /* DetailsViewModel.swift in Sources */,
 				E50808FF2AF64AB30000B821 /* PeopleView.swift in Sources */,
 				E50808FD2AF642B30000B821 /* StaticJSONMapper.swift in Sources */,
 				E508090A2AF791A20000B821 /* PillComponent.swift in Sources */,
@@ -365,6 +372,7 @@
 				E50809112AF7C1140000B821 /* NetworkingManager.swift in Sources */,
 				E50808FA2AF641F00000B821 /* Models.swift in Sources */,
 				E50809052AF7909D0000B821 /* PersonItemView.swift in Sources */,
+				E50809132AF96D2C0000B821 /* PeopleViewModel.swift in Sources */,
 				E508090E2AF7AC320000B821 /* CreateView.swift in Sources */,
 				E50809012AF64B390000B821 /* Symbols.swift in Sources */,
 			);
