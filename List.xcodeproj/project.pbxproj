@@ -28,6 +28,7 @@
 		E50809152AF972930000B821 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50809142AF972930000B821 /* DetailsViewModel.swift */; };
 		E50809172AF977940000B821 /* NewPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50809162AF977940000B821 /* NewPerson.swift */; };
 		E50809192AF978080000B821 /* CreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50809182AF978080000B821 /* CreateViewModel.swift */; };
+		E508091B2AFA0DFF0000B821 /* CheckmarkPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = E508091A2AFA0DFF0000B821 /* CheckmarkPopover.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		E50809142AF972930000B821 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		E50809162AF977940000B821 /* NewPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPerson.swift; sourceTree = "<group>"; };
 		E50809182AF978080000B821 /* CreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewModel.swift; sourceTree = "<group>"; };
+		E508091A2AFA0DFF0000B821 /* CheckmarkPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckmarkPopover.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				E50809092AF791A20000B821 /* PillComponent.swift */,
+				E508091A2AFA0DFF0000B821 /* CheckmarkPopover.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				E50809112AF7C1140000B821 /* NetworkingManager.swift in Sources */,
 				E50808FA2AF641F00000B821 /* Models.swift in Sources */,
 				E50809172AF977940000B821 /* NewPerson.swift in Sources */,
+				E508091B2AFA0DFF0000B821 /* CheckmarkPopover.swift in Sources */,
 				E50809052AF7909D0000B821 /* PersonItemView.swift in Sources */,
 				E50809132AF96D2C0000B821 /* PeopleViewModel.swift in Sources */,
 				E508090E2AF7AC320000B821 /* CreateView.swift in Sources */,
