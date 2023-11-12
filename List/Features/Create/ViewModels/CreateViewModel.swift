@@ -17,41 +17,40 @@ final class CreateViewModel: ObservableObject {
     
     private let validator = CreateValidator()
     
-    func create() {
+    @MainActor
+    func create() async {
         
         do {
+            
             try validator.validate(person)
             
             state = .submitting
             
             let encoder = JSONEncoder()
             encoder.keyEncodingStrategy = .convertToSnakeCase
-            let data = try? encoder.encode(person)
-            NetworkingManager.shared.request(.create(submissionData: data)) { [weak self] res in
-                
-                DispatchQueue.main.async {
-                    switch res {
-                    case .success:
-                        self?.state = .succesful
-                    case .failure(let err):
-                        self?.state = .unsuccesful
-                        self?.hasError = true
-                        
-                        if let networkingError = err as? NetworkingManager.NetworkingError {
-                            self?.error = .networking(error: networkingError)
-                        }
-                    }
-                }
-            }
+            let data = try encoder.encode(person)
+            
+            try await NetworkingManager.shared.request(.create(submissionData: data))
+            state = .succesful
             
         } catch {
+            
             self.hasError = true
-            if let validateError = error as? CreateValidator.CreateValidatorError {
-                self.error = .networking(error: validateError)
+            self.state = .unsuccesful
+            
+            switch error {
+            case is NetworkingManager.NetworkingError:
+                self.error = .networking(error: error as! NetworkingManager.NetworkingError)
+                
+            case is CreateValidator.CreateValidatorError:
+                self.error = .validation(error: error as! CreateValidator.CreateValidatorError)
+                
+            default:
+                self.error = .system(error: error)
             }
-            print(error)
+            
         }
-    
+        
     }
 }
 
@@ -69,6 +68,7 @@ extension CreateViewModel {
     enum FormError: LocalizedError {
         case networking(error: LocalizedError)
         case validation(error: LocalizedError)
+        case system(error: Error)
     }
 }
 
@@ -77,8 +77,12 @@ extension CreateViewModel.FormError {
     var errorDescription: String? {
         switch self {
         case .networking(let error),
-             .validation(let error):
+                .validation(let error):
             return error.errorDescription
+            
+        case .system(let err):
+            return err.localizedDescription
+            
         }
     }
 }

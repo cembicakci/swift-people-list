@@ -13,82 +13,48 @@ final class NetworkingManager {
     
     private init() { }
     
-    func request<T: Codable>(_ endpoint: Endpoint,
-                             type: T.Type,
-                             completion: @escaping (Result<T, Error>) -> Void) {
+    func request<T: Codable>(_ endpoint: Endpoint, type: T.Type) async throws -> T {
         
         guard let url = endpoint.url else {
-            completion(.failure(NetworkingError.invalidUrl))
-            return
+            throw NetworkingError.invalidUrl
         }
         
         let request = buildRequest(from: url, methodType: endpoint.methodType)
-                
-        let dataTasks = URLSession.shared.dataTask(with: request) { data, response, error in
-            
-            if error != nil {
-                completion(.failure(NetworkingError.custom(error: error!)))
-                return
-            }
-            
-            guard let response = response as? HTTPURLResponse,
-                        response.statusCode >= 200,
-                            response.statusCode < 400 else {
-                let statusCode = (response as! HTTPURLResponse).statusCode
-                completion(.failure(NetworkingError.invalidStatusCode(statusCode: statusCode)))
-                return
-            }
-            
-            guard let data = data else {
-                completion(.failure(NetworkingError.invalidData))
-                return
-            }
-            
-            do {
-                let decoder = JSONDecoder()
-                decoder.keyDecodingStrategy = .convertFromSnakeCase
-                let res = try decoder.decode(T.self, from: data)
-                completion(.success(res))
-                
-            } catch  {
-                completion(.failure(NetworkingError.failedToDecode(error: error)))
-            }
-            
+        
+        let (data, response) = try await URLSession.shared.data(for: request)
+        
+        guard let response = response as? HTTPURLResponse,
+                    response.statusCode >= 200,
+                        response.statusCode < 400 else {
+            let statusCode = (response as! HTTPURLResponse).statusCode
+            throw NetworkingError.invalidStatusCode(statusCode: statusCode)
         }
         
-        dataTasks.resume()
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        let res = try decoder.decode(T.self, from: data)
         
+        return res
     }
     
-    func request(_ endpoint: Endpoint,
-                 completion: @escaping (Result<Void, Error>) -> Void) {
+    func request(_ endpoint: Endpoint) async throws {
         
         guard let url = endpoint.url else {
-            completion(.failure(NetworkingError.invalidUrl))
-            return
+            throw NetworkingError.invalidUrl
         }
         
         let request = buildRequest(from: url, methodType: endpoint.methodType)
+        
+        let (_, response) = try await URLSession.shared.data(for: request)
 
-        let dataTasks = URLSession.shared.dataTask(with: request) { data, response, error in
-            
-            if error != nil {
-                completion(.failure(NetworkingError.custom(error: error!)))
-                return
-            }
-            
-            guard let response = response as? HTTPURLResponse,
-                        response.statusCode >= 200,
-                            response.statusCode < 400 else {
-                let statusCode = (response as! HTTPURLResponse).statusCode
-                completion(.failure(NetworkingError.invalidStatusCode(statusCode: statusCode)))
-                return
-            }
-             
-            completion(.success(()))
+        guard let response = response as? HTTPURLResponse,
+                    response.statusCode >= 200,
+                        response.statusCode < 400 else {
+            let statusCode = (response as! HTTPURLResponse).statusCode
+            throw NetworkingError.invalidStatusCode(statusCode: statusCode)
         }
         
-        dataTasks.resume()
+        
 
     }
     
