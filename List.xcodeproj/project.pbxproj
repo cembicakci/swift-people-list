@@ -29,6 +29,7 @@
 		E50809172AF977940000B821 /* NewPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50809162AF977940000B821 /* NewPerson.swift */; };
 		E50809192AF978080000B821 /* CreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50809182AF978080000B821 /* CreateViewModel.swift */; };
 		E508091B2AFA0DFF0000B821 /* CheckmarkPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = E508091A2AFA0DFF0000B821 /* CheckmarkPopover.swift */; };
+		E531C7282B00CF5900F0AD1D /* CreateValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531C7272B00CF5900F0AD1D /* CreateValidator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		E50809162AF977940000B821 /* NewPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPerson.swift; sourceTree = "<group>"; };
 		E50809182AF978080000B821 /* CreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewModel.swift; sourceTree = "<group>"; };
 		E508091A2AFA0DFF0000B821 /* CheckmarkPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckmarkPopover.swift; sourceTree = "<group>"; };
+		E531C7272B00CF5900F0AD1D /* CreateValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateValidator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 		E50808E72AF63E860000B821 /* Create */ = {
 			isa = PBXGroup;
 			children = (
+				E531C7262B00CF0100F0AD1D /* Validator */,
 				E50808EE2AF63F180000B821 /* ViewModels */,
 				E50808ED2AF63F140000B821 /* Model */,
 				E50808EC2AF63F100000B821 /* Views */,
@@ -297,6 +300,14 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		E531C7262B00CF0100F0AD1D /* Validator */ = {
+			isa = PBXGroup;
+			children = (
+				E531C7272B00CF5900F0AD1D /* CreateValidator.swift */,
+			);
+			path = Validator;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -385,6 +396,7 @@
 				E508091B2AFA0DFF0000B821 /* CheckmarkPopover.swift in Sources */,
 				E50809052AF7909D0000B821 /* PersonItemView.swift in Sources */,
 				E50809132AF96D2C0000B821 /* PeopleViewModel.swift in Sources */,
+				E531C7282B00CF5900F0AD1D /* CreateValidator.swift in Sources */,
 				E508090E2AF7AC320000B821 /* CreateView.swift in Sources */,
 				E50809012AF64B390000B821 /* Symbols.swift in Sources */,
 			);
