@@ -53,8 +53,6 @@ final class NetworkingManager {
             let statusCode = (response as! HTTPURLResponse).statusCode
             throw NetworkingError.invalidStatusCode(statusCode: statusCode)
         }
-        
-        
 
     }
     
