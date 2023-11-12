@@ -30,6 +30,9 @@
 		E50809192AF978080000B821 /* CreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50809182AF978080000B821 /* CreateViewModel.swift */; };
 		E508091B2AFA0DFF0000B821 /* CheckmarkPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = E508091A2AFA0DFF0000B821 /* CheckmarkPopover.swift */; };
 		E531C7282B00CF5900F0AD1D /* CreateValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531C7272B00CF5900F0AD1D /* CreateValidator.swift */; };
+		E54E00D62B00DA6E00B09C7A /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54E00D52B00DA6E00B09C7A /* HapticsManager.swift */; };
+		E54E00D82B00DBF800B09C7A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54E00D72B00DBF800B09C7A /* SettingsView.swift */; };
+		E54E00DB2B00DDA200B09C7A /* UserDefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54E00DA2B00DDA200B09C7A /* UserDefaultKeys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +60,9 @@
 		E50809182AF978080000B821 /* CreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewModel.swift; sourceTree = "<group>"; };
 		E508091A2AFA0DFF0000B821 /* CheckmarkPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckmarkPopover.swift; sourceTree = "<group>"; };
 		E531C7272B00CF5900F0AD1D /* CreateValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateValidator.swift; sourceTree = "<group>"; };
+		E54E00D52B00DA6E00B09C7A /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
+		E54E00D72B00DBF800B09C7A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		E54E00DA2B00DDA200B09C7A /* UserDefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultKeys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +258,7 @@
 		E50808F22AF63F2D0000B821 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E54E00D72B00DBF800B09C7A /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -259,6 +266,8 @@
 		E50808F72AF641DE0000B821 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				E54E00D92B00DD8A00B09C7A /* UserDefaults */,
+				E54E00D42B00DA6100B09C7A /* Haptics */,
 				E508090F2AF7C1070000B821 /* API */,
 				E50809062AF791690000B821 /* Components */,
 				E50808FB2AF6429E0000B821 /* Mapper */,
@@ -306,6 +315,22 @@
 				E531C7272B00CF5900F0AD1D /* CreateValidator.swift */,
 			);
 			path = Validator;
+			sourceTree = "<group>";
+		};
+		E54E00D42B00DA6100B09C7A /* Haptics */ = {
+			isa = PBXGroup;
+			children = (
+				E54E00D52B00DA6E00B09C7A /* HapticsManager.swift */,
+			);
+			path = Haptics;
+			sourceTree = "<group>";
+		};
+		E54E00D92B00DD8A00B09C7A /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				E54E00DA2B00DDA200B09C7A /* UserDefaultKeys.swift */,
+			);
+			path = UserDefaults;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,6 +405,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E54E00D82B00DBF800B09C7A /* SettingsView.swift in Sources */,
 				E50808F42AF63F590000B821 /* UserDetailResponse.swift in Sources */,
 				E50809032AF64BDA0000B821 /* Theme.swift in Sources */,
 				E50809152AF972930000B821 /* DetailsViewModel.swift in Sources */,
@@ -395,9 +421,11 @@
 				E50809172AF977940000B821 /* NewPerson.swift in Sources */,
 				E508091B2AFA0DFF0000B821 /* CheckmarkPopover.swift in Sources */,
 				E50809052AF7909D0000B821 /* PersonItemView.swift in Sources */,
+				E54E00DB2B00DDA200B09C7A /* UserDefaultKeys.swift in Sources */,
 				E50809132AF96D2C0000B821 /* PeopleViewModel.swift in Sources */,
 				E531C7282B00CF5900F0AD1D /* CreateValidator.swift in Sources */,
 				E508090E2AF7AC320000B821 /* CreateView.swift in Sources */,
+				E54E00D62B00DA6E00B09C7A /* HapticsManager.swift in Sources */,
 				E50809012AF64B390000B821 /* Symbols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
