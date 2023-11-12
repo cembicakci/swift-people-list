@@ -33,6 +33,7 @@
 		E54E00D62B00DA6E00B09C7A /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54E00D52B00DA6E00B09C7A /* HapticsManager.swift */; };
 		E54E00D82B00DBF800B09C7A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54E00D72B00DBF800B09C7A /* SettingsView.swift */; };
 		E54E00DB2B00DDA200B09C7A /* UserDefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54E00DA2B00DDA200B09C7A /* UserDefaultKeys.swift */; };
+		E54E00DD2B00DE6E00B09C7A /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54E00DC2B00DE6E00B09C7A /* Endpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		E54E00D52B00DA6E00B09C7A /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
 		E54E00D72B00DBF800B09C7A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		E54E00DA2B00DDA200B09C7A /* UserDefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultKeys.swift; sourceTree = "<group>"; };
+		E54E00DC2B00DE6E00B09C7A /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -305,6 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				E50809102AF7C1140000B821 /* NetworkingManager.swift */,
+				E54E00DC2B00DE6E00B09C7A /* Endpoint.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				E508091B2AFA0DFF0000B821 /* CheckmarkPopover.swift in Sources */,
 				E50809052AF7909D0000B821 /* PersonItemView.swift in Sources */,
 				E54E00DB2B00DDA200B09C7A /* UserDefaultKeys.swift in Sources */,
+				E54E00DD2B00DE6E00B09C7A /* Endpoint.swift in Sources */,
 				E50809132AF96D2C0000B821 /* PeopleViewModel.swift in Sources */,
 				E531C7282B00CF5900F0AD1D /* CreateValidator.swift in Sources */,
 				E508090E2AF7AC320000B821 /* CreateView.swift in Sources */,
